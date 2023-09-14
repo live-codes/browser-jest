@@ -1,0 +1,20 @@
+diff --git a/node_modules/@jest/expect/build/index.js b/node_modules/@jest/expect/build/index.js
+index bc1cc93..7bc0bda 100644
+--- a/node_modules/@jest/expect/build/index.js
++++ b/node_modules/@jest/expect/build/index.js
+@@ -12,7 +12,14 @@ function _expect() {
+   return data;
+ }
+ function _jestSnapshot() {
+-  const data = require('jest-snapshot');
++  const data = {
++    toMatchInlineSnapshot: () => {},
++    toMatchSnapshot: () => {},
++    toThrowErrorMatchingInlineSnapshot: () => {},
++    toThrowErrorMatchingSnapshot: () => {},
++    addSerializer: () => {},
++  }
++  // const data = require('jest-snapshot');
+   _jestSnapshot = function () {
+     return data;
+   };

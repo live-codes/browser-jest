@@ -1,0 +1,13 @@
+diff --git a/node_modules/graceful-fs/graceful-fs.js b/node_modules/graceful-fs/graceful-fs.js
+index 8d5b89e..6ac55f3 100644
+--- a/node_modules/graceful-fs/graceful-fs.js
++++ b/node_modules/graceful-fs/graceful-fs.js
+@@ -38,7 +38,7 @@ else if (/\bgfs4\b/i.test(process.env.NODE_DEBUG || ''))
+     m = 'GFS4: ' + m.split(/\n/).join('\nGFS4: ')
+     console.error(m)
+   }
+-
++fs = {...fs};
+ // Once time initialization
+ if (!fs[gracefulQueue]) {
+   // This queue can be shared by multiple loaded instances

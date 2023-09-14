@@ -1,0 +1,18 @@
+diff --git a/node_modules/write-file-atomic/lib/index.js b/node_modules/write-file-atomic/lib/index.js
+index 9d79d79..25c841a 100644
+--- a/node_modules/write-file-atomic/lib/index.js
++++ b/node_modules/write-file-atomic/lib/index.js
+@@ -15,10 +15,11 @@ const activeFiles = {}
+ /* istanbul ignore next */
+ const threadId = (function getId () {
+   try {
+-    const workerThreads = require('worker_threads')
++    return 0;
++    // const workerThreads = require('worker_threads')
+ 
+     /// if we are in main thread, this is set to `0`
+-    return workerThreads.threadId
++    // return workerThreads.threadId
+   } catch (e) {
+     // worker_threads are not available, fallback to 0
+     return 0

@@ -1,0 +1,28 @@
+diff --git a/node_modules/jest-worker/build/workers/NodeThreadsWorker.js b/node_modules/jest-worker/build/workers/NodeThreadsWorker.js
+index e25247a..2fa1e64 100644
+--- a/node_modules/jest-worker/build/workers/NodeThreadsWorker.js
++++ b/node_modules/jest-worker/build/workers/NodeThreadsWorker.js
+@@ -12,7 +12,8 @@ function _os() {
+   return data;
+ }
+ function _worker_threads() {
+-  const data = require('worker_threads');
++  const data = {};
++  // const data = require('worker_threads');
+   _worker_threads = function () {
+     return data;
+   };
+diff --git a/node_modules/jest-worker/build/workers/messageParent.js b/node_modules/jest-worker/build/workers/messageParent.js
+index 62e2cce..b0b0805 100644
+--- a/node_modules/jest-worker/build/workers/messageParent.js
++++ b/node_modules/jest-worker/build/workers/messageParent.js
+@@ -5,7 +5,8 @@ Object.defineProperty(exports, '__esModule', {
+ });
+ exports.default = messageParent;
+ function _worker_threads() {
+-  const data = require('worker_threads');
++  const data = {};
++  // const data = require('worker_threads');
+   _worker_threads = function () {
+     return data;
+   };

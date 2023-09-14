@@ -1,0 +1,25 @@
+diff --git a/node_modules/jest-circus/build/index.js b/node_modules/jest-circus/build/index.js
+index 97a2521..75c655b 100644
+--- a/node_modules/jest-circus/build/index.js
++++ b/node_modules/jest-circus/build/index.js
+@@ -227,6 +227,7 @@ exports.test = test;
+ const it = test;
+ exports.it = it;
+ var _default = {
++  run: _run.default,
+   afterAll,
+   afterEach,
+   beforeAll,
+diff --git a/node_modules/jest-circus/build/utils.js b/node_modules/jest-circus/build/utils.js
+index defd9b3..c9d41cb 100644
+--- a/node_modules/jest-circus/build/utils.js
++++ b/node_modules/jest-circus/build/utils.js
+@@ -85,7 +85,7 @@ const stackUtils = new _stackUtils.default({
+   cwd: 'A path that does not exist'
+ });
+ const jestEachBuildDir = (0, _slash.default)(
+-  path.dirname(require.resolve('jest-each'))
++  '' // path.dirname(require.resolve('jest-each'))
+ );
+ function takesDoneCallback(fn) {
+   return fn.length > 0;
