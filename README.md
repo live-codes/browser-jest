@@ -4,6 +4,8 @@ This project aims to make Jest work in the browser. As used in [LiveCodes](https
 
 ## Usage
 
+ESM:
+
 ```js
 import {
   afterAll,
@@ -38,4 +40,29 @@ test('adds 1 + 2 to equal 3', () => {
 run().then((results) => {
   console.log(results);
 });
+```
+
+UMD:
+
+```html
+<script src="https://unpkg.com/@live-codes/browser-jest/dist/browser-jest.umd.js"></script>
+<script>
+  const {
+    afterAll,
+    afterEach,
+    beforeAll,
+    beforeEach,
+    describe,
+    fdescribe,
+    xdescribe,
+    it,
+    test,
+    fit,
+    xtest,
+    xit,
+    expect,
+    jest,
+    run,
+  } = window.browserJest;
+</script>
 ```

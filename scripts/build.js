@@ -28,3 +28,12 @@ esbuild.build({
   ...baseOptions,
   entryPoints: ['src/index.ts'],
 });
+
+esbuild.build({
+  ...baseOptions,
+  entryPoints: ['src/index.ts'],
+  format: 'iife',
+  globalName: 'browserJest',
+  outdir: undefined,
+  outfile: 'dist/browser-jest.umd.js',
+});
