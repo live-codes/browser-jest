@@ -1,9 +1,8 @@
 import expect from 'expect';
-import jest from 'jest-mock';
+import * as jest from 'jest-mock';
 import jestCircus from 'jest-circus';
 
-const {afterAll, afterEach, beforeAll, beforeEach, describe, it, test, run} =
-  jestCircus;
+const { afterAll, afterEach, beforeAll, beforeEach, describe, it, test, run } = jestCircus;
 
 const fdescribe = describe.only;
 const xdescribe = describe.skip;

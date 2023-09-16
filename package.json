@@ -1,6 +1,6 @@
 {
   "name": "@live-codes/browser-jest",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Run Jest in the browser",
   "repository": "https://github.com/live-codes/browser-jest",
   "author": "Hatem Hosny",
